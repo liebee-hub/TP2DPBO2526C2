@@ -1,0 +1,13 @@
+Untuk menguji aksi TAMBAH lewat form (method POST), gunakan isian berikut di
+form "Tambah Film", lalu klik tombol Tambah = 'tambah':
+
+id           = 6
+judul        = Kun Marah
+durasi       = 98
+foto_produk  = gambar/kunmarah.jpg
+genre        = Fantasy
+sutradara    = Upi
+klasifikasi  = 13+
+studio       = Studio 5
+jadwal       = 14:30
+harga        = 65000

@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="opencode">
+  <diagram id="bioskop" name="Class Diagram Bioskop">
+    <mxGraphModel dx="1154" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="prodHdr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;verticalAlign=middle;" value="Produk" vertex="1">
+          <mxGeometry height="40" width="360" x="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="prodAttr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" value="- id : int&lt;br&gt;- judul : string&lt;br&gt;- durasi : int" vertex="1">
+          <mxGeometry height="80" width="360" x="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="prodMeth" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" value="+ Produk(id, judul, durasi)&lt;br&gt;+ getId() : int&lt;br&gt;+ getJudul() : string&lt;br&gt;+ getDurasi() : int&lt;br&gt;+ setJudul(x)&lt;br&gt;+ setDurasi(x)" vertex="1">
+          <mxGeometry height="110" width="360" x="240" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="filmHdr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;verticalAlign=middle;" value="Film" vertex="1">
+          <mxGeometry height="40" width="360" x="240" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="filmAttr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" value="- genre : string&lt;br&gt;- sutradara : string&lt;br&gt;- klasifikasi : string" vertex="1">
+          <mxGeometry height="80" width="360" x="240" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="filmMeth" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" value="+ Film(id, judul, durasi,&lt;br&gt;         genre, sutradara, klasifikasi)&lt;br&gt;+ getGenre() : string&lt;br&gt;+ getSutradara() : string&lt;br&gt;+ getKlasifikasi() : string&lt;br&gt;+ setGenre(x), setSutradara(x), setKlasifikasi(x)" vertex="1">
+          <mxGeometry height="130" width="360" x="240" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="fbHdr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1;verticalAlign=middle;" value="FilmBioskop" vertex="1">
+          <mxGeometry height="40" width="360" x="240" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="fbAttr" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" value="- studio : string&lt;br&gt;- jadwal : string&lt;br&gt;- harga : int" vertex="1">
+          <mxGeometry height="80" width="360" x="240" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="fbMeth" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" value="+ FilmBioskop(id, judul, durasi, genre,&lt;br&gt;         sutradara, klasifikasi,&lt;br&gt;         studio, jadwal, harga)&lt;br&gt;+ getStudio() : string&lt;br&gt;+ getJadwal() : string&lt;br&gt;+ getHarga() : int&lt;br&gt;+ setStudio(x), setJadwal(x), setHarga(x)" vertex="1">
+          <mxGeometry height="150" width="360" x="240" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="filmHdr" style="endArrow=block;endFill=0;endSize=18;html=1;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="prodMeth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="fbHdr" style="endArrow=block;endFill=0;endSize=18;html=1;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=11;" target="filmMeth" value="extends">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

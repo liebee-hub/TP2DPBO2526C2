@@ -1,25 +1,21 @@
 <?php
-class Film {
-    private $id;
-    private $judul;
-    private $genre;
-    private $durasi;
-    private $gambar;
+require 'Produk.php';
 
-    public function __construct($id, $judul, $genre, $durasi, $gambar){
-        $this->id=$id;
-        $this->judul=$judul;
-        $this->genre=$genre;
-        $this->durasi=$durasi;
-        $this->gambar=$gambar;
+class Film extends Produk {
+    private $genre;
+    private $sutradara;
+    private $klasifikasi;
+
+    public function __construct($id, $judul, $durasi, $foto_produk, $genre, $sutradara, $klasifikasi){
+        parent::__construct($id, $judul, $durasi, $foto_produk);
+        $this->genre = $genre;
+        $this->sutradara = $sutradara;
+        $this->klasifikasi = $klasifikasi;
     }
-    public function getId(){ return $this->id; }
-    public function getJudul(){ return $this->judul; }
     public function getGenre(){ return $this->genre; }
-    public function getDurasi(){ return $this->durasi; }
-    public function getGambar(){ return $this->gambar; }
-    public function setJudul($x){ $this->judul=$x; }
-    public function setGenre($x){ $this->genre=$x; }
-    public function setDurasi($x){ $this->durasi=$x; }
-    public function setGambar($x){ $this->gambar=$x; }
+    public function getSutradara(){ return $this->sutradara; }
+    public function getKlasifikasi(){ return $this->klasifikasi; }
+    public function setGenre($x){ $this->genre = $x; }
+    public function setSutradara($x){ $this->sutradara = $x; }
+    public function setKlasifikasi($x){ $this->klasifikasi = $x; }
 }

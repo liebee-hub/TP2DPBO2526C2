@@ -1,28 +1,25 @@
 #ifndef FILM_H
 #define FILM_H
-#include <string>
-using namespace std;
+#include "Produk.h"
 
-class Film {
+class Film : public Produk {
 private:
-    int id;
-    string judul, genre, gambar;
-    int durasi;
+    string genre;
+    string sutradara;
+    string klasifikasi;
 public:
     Film() {}
-    Film(int id, string judul, string genre, int durasi, string gambar) {
-        this->id=id; this->judul=judul; this->genre=genre;
-        this->durasi=durasi; this->gambar=gambar;
+    Film(int id, string judul, int durasi, string genre, string sutradara, string klasifikasi)
+        : Produk(id, judul, durasi) {
+        this->genre = genre;
+        this->sutradara = sutradara;
+        this->klasifikasi = klasifikasi;
     }
-    int getId(){ return id; }
-    string getJudul(){ return judul; }
-    string getGenre(){ return genre; }
-    int getDurasi(){ return durasi; }
-    string getGambar(){ return gambar; }
-
-    void setJudul(string x){ judul=x; }
-    void setGenre(string x){ genre=x; }
-    void setDurasi(int x){ durasi=x; }
-    void setGambar(string x){ gambar=x; }
+    string getGenre() { return genre; }
+    string getSutradara() { return sutradara; }
+    string getKlasifikasi() { return klasifikasi; }
+    void setGenre(string x) { genre = x; }
+    void setSutradara(string x) { sutradara = x; }
+    void setKlasifikasi(string x) { klasifikasi = x; }
 };
 #endif
